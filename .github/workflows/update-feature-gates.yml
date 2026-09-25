@@ -32,8 +32,11 @@ jobs:
         run: pnpm exec tsx scripts/update-feature-gates.ts
 
       - name: Create Pull Request
+        id: create_pull_request
+        continue-on-error: true
         uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           branch-token: ${{ secrets.GITHUB_TOKEN }}
           sign-commits: true
           commit-message: "Update feature gates from Agave wiki"
@@ -43,3 +46,13 @@ jobs:
           base: master
           maintainer-can-modify: true
           delete-branch: true
+
+      - name: Note PR creation limitation
+        if: steps.create_pull_request.outcome == 'failure'
+        run: |
+          {
+            echo "## Pull request creation skipped"
+            echo
+            echo "The feature-gate data refresh completed, but this repository does not allow GitHub Actions to create pull requests with \`GITHUB_TOKEN\`."
+            echo "Enable **Settings → Actions → General → Workflow permissions → Allow GitHub Actions to create and approve pull requests** to restore automatic PR creation."
+          } >> "$GITHUB_STEP_SUMMARY"
