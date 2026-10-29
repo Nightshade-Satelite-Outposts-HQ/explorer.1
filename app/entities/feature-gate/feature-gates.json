@@ -2084,7 +2084,7 @@
     "description": "Reduce Solana's target slot time from 400ms to 200ms in four feature-gated steps:",
     "devnet_activation_epoch": 1118,
     "key": "iBRLL3k18HST852F1Mf3Lv83waTNQmmqvKDxvYGwQFL",
-    "mainnet_activation_epoch": null,
+    "mainnet_activation_epoch": 1023,
     "min_agave_versions": [
       "v4.2.0-beta.1"
     ],
@@ -2108,7 +2108,7 @@
     "description": "Reduce Solana's target slot time from 400ms to 200ms in four feature-gated steps:",
     "devnet_activation_epoch": 1123,
     "key": "iBRLMc81UjRa8fn8A6eE8bJTnRbgQoPTynM51akENCV",
-    "mainnet_activation_epoch": null,
+    "mainnet_activation_epoch": 1036,
     "min_agave_versions": [
       "v4.2.0-beta.1"
     ],
@@ -2130,7 +2130,7 @@
   {
     "comms_required": null,
     "description": "Reduce Solana's target slot time from 400ms to 200ms in four feature-gated steps:",
-    "devnet_activation_epoch": null,
+    "devnet_activation_epoch": 1128,
     "key": "iBRLjhJnkmDZgNoZRDMW11d8ZV7HvsL3vAyRjZB5npW",
     "mainnet_activation_epoch": null,
     "min_agave_versions": [
@@ -2154,7 +2154,7 @@
   {
     "comms_required": null,
     "description": "To allow for non-disruptive rent increases, the Solana runtime relaxes post-execution minimum balance checks and adjusts stake delegations during epoch rewards calculations.",
-    "devnet_activation_epoch": null,
+    "devnet_activation_epoch": 1132,
     "key": "BY4JhHLahVzS9ynfDz4exzGPbVXhFmJvEyMWsXbDBqME",
     "mainnet_activation_epoch": null,
     "min_agave_versions": [
@@ -2172,13 +2172,13 @@
     "simds": [
       "0392"
     ],
-    "testnet_activation_epoch": null,
+    "testnet_activation_epoch": 1018,
     "title": "SIMD-0392: Relaxation of post-execution min_balance check"
   },
   {
     "comms_required": null,
     "description": "This SIMD proposes replacing all IEEE-754 double-precision floating-point arithmetic within the Solana Stake Program & validator client's warmup/ cooldown logic with a fixed-point implementation using integer arithmetic. The new logic expresses the warmup/cooldown rate in basis\u2026",
-    "devnet_activation_epoch": null,
+    "devnet_activation_epoch": 1131,
     "key": "s51VGwCAgebo2745DSUris72RavoLkXGUmVJosESCXr",
     "mainnet_activation_epoch": null,
     "min_agave_versions": [
@@ -2204,7 +2204,7 @@
   {
     "comms_required": null,
     "description": "Reduce lamports_per_byte incrementally from 6960 to 696 via five steps: 6333, 5080, 2575, 1322, and 696. This proposal supersedes SIMD-0436, providing a more granular reduction schedule.",
-    "devnet_activation_epoch": null,
+    "devnet_activation_epoch": 1137,
     "key": "4a6f7o7iTcA8hRDCrPLkSatnt5Ykxiu36wo5p1Tt12wC",
     "mainnet_activation_epoch": null,
     "min_agave_versions": [
@@ -2224,13 +2224,13 @@
     "simds": [
       "0437"
     ],
-    "testnet_activation_epoch": null,
+    "testnet_activation_epoch": 1019,
     "title": "SIMD-0437-1: Set lamports per byte to 6333"
   },
   {
     "comms_required": null,
     "description": "The current live transaction formats, v0 and legacy, have a number of limitations that make them unsuitable for efficient ingestion, processing, and unable to support developer features that are required for today's applications.",
-    "devnet_activation_epoch": null,
+    "devnet_activation_epoch": 1140,
     "key": "txv1aq4pp281K9um3tnPgkfX8UqtFT6wcVW3hNezGLL",
     "mainnet_activation_epoch": null,
     "min_agave_versions": [
@@ -2250,13 +2250,13 @@
     "simds": [
       "0385"
     ],
-    "testnet_activation_epoch": null,
+    "testnet_activation_epoch": 1025,
     "title": "SIMD-0385: Transaction V1"
   },
   {
     "comms_required": null,
     "description": "Allow validators to specify custom commission collector accounts where block revenue and inflation rewards commissions will be deposited.",
-    "devnet_activation_epoch": null,
+    "devnet_activation_epoch": 1138,
     "key": "3HcSrCTGXTUnrTueHi4DAwNuMxZSsm5xui2Ax3mgxHqf",
     "mainnet_activation_epoch": null,
     "min_agave_versions": [
@@ -2276,13 +2276,13 @@
     "simds": [
       "0232"
     ],
-    "testnet_activation_epoch": null,
+    "testnet_activation_epoch": 1020,
     "title": "SIMD-0232: Custom Commission Collector"
   },
   {
     "comms_required": null,
     "description": "Reduce lamports_per_byte incrementally from 6960 to 696 via five steps: 6333, 5080, 2575, 1322, and 696. This proposal supersedes SIMD-0436, providing a more granular reduction schedule.",
-    "devnet_activation_epoch": null,
+    "devnet_activation_epoch": 1141,
     "key": "61BtM7BkDEE8Yq5fskEVAQT9mYA8qCejJWoLe5apqg81",
     "mainnet_activation_epoch": null,
     "min_agave_versions": [
@@ -2302,7 +2302,111 @@
     "simds": [
       "0437"
     ],
-    "testnet_activation_epoch": null,
+    "testnet_activation_epoch": 1026,
     "title": "SIMD-0437-2: Set lamports per byte to 5080"
+  },
+  {
+    "comms_required": null,
+    "description": "The partitioned epoch rewards process currently requires all stake accounts, including inactive stakes, to be considered when computing the lattice hash and rewards partition count. But inactive stakes do not contribute to stake weight or rewards, so they shouldn't be required.",
+    "devnet_activation_epoch": null,
+    "key": "RMsTKfD6hZnBhhNvgGBeKNrqCNkeoP3DYYxNtcuWtRg",
+    "mainnet_activation_epoch": null,
+    "min_agave_versions": [
+      "v4.4.0-beta.0"
+    ],
+    "min_fd_versions": [
+      "v26.10.0"
+    ],
+    "min_jito_versions": [],
+    "owners": [
+      "2501babe"
+    ],
+    "planned_testnet_order": null,
+    "simd_link": [
+      "https://github.com/solana-foundation/solana-improvement-documents/blob/main/proposals/0599-rm-inactive-stakes-from-per.md"
+    ],
+    "simds": [
+      "0599"
+    ],
+    "testnet_activation_epoch": null,
+    "title": "SIMD-0599: Remove inactive stakes from stake delegations"
+  },
+  {
+    "comms_required": null,
+    "description": "Reduce lamports_per_byte incrementally from 6960 to 696 via five steps: 6333, 5080, 2575, 1322, and 696. This proposal supersedes SIMD-0436, providing a more granular reduction schedule.",
+    "devnet_activation_epoch": null,
+    "key": "rntCigrTppP5JdZz7K8TyN9sMzLdAcXp8SejYpVpX6D",
+    "mainnet_activation_epoch": null,
+    "min_agave_versions": [
+      "v4.3.0-rc.1"
+    ],
+    "min_fd_versions": [
+      "v26.10.0"
+    ],
+    "min_jito_versions": [],
+    "owners": [
+      "brooksprumo"
+    ],
+    "planned_testnet_order": null,
+    "simd_link": [
+      "https://github.com/solana-foundation/solana-improvement-documents/blob/main/proposals/0437-incremental-rent-reduction.md"
+    ],
+    "simds": [
+      "0437"
+    ],
+    "testnet_activation_epoch": null,
+    "title": "SIMD-0437-3: Set lamports per byte to 2575"
+  },
+  {
+    "comms_required": null,
+    "description": "All clients currently send 32 data + 32 coding shreds, however Turbine still allows to send and receive a variable number of shreds. With this change we will enforce sending and receiving only 32 data + 32 coding shreds.",
+    "devnet_activation_epoch": null,
+    "key": "turbzzBJLGMJJikLvgCCJu9e1hTmfxwarrbLndYAsK5",
+    "mainnet_activation_epoch": null,
+    "min_agave_versions": [
+      "v4.4.0-beta.0"
+    ],
+    "min_fd_versions": [
+      "v26.10.0"
+    ],
+    "min_jito_versions": [],
+    "owners": [
+      "alexpyattaev"
+    ],
+    "planned_testnet_order": null,
+    "simd_link": [
+      "https://github.com/solana-foundation/solana-improvement-documents/blob/main/proposals/0317-enforce-32-data-shreds.md"
+    ],
+    "simds": [
+      "0317"
+    ],
+    "testnet_activation_epoch": null,
+    "title": "SIMD-0317: Enforce the Merkle proof size of a fixed 32:32 FEC set"
+  },
+  {
+    "comms_required": null,
+    "description": "This SIMD proposes changing the default behavior of program upgrades to automatically resize the program data account so that its ELF region matches the length of the ELF being deployed. The total account size remains the program data metadata header plus the ELF length. If the\u2026",
+    "devnet_activation_epoch": null,
+    "key": "EhisBfVtGvEA8bVCVN5VMaYEaX6iTfoUrmcDi8LY7Kxy",
+    "mainnet_activation_epoch": null,
+    "min_agave_versions": [
+      "v4.4.0-beta.0"
+    ],
+    "min_fd_versions": [
+      "v26.10.0"
+    ],
+    "min_jito_versions": [],
+    "owners": [
+      "buffalojoec"
+    ],
+    "planned_testnet_order": null,
+    "simd_link": [
+      "https://github.com/solana-foundation/solana-improvement-documents/blob/main/proposals/0433-loader-v3-set-program-data-to-elf-length.md"
+    ],
+    "simds": [
+      "0433"
+    ],
+    "testnet_activation_epoch": null,
+    "title": "SIMD-0433: Loader V3 Set Program Data to ELF Length"
   }
 ]
